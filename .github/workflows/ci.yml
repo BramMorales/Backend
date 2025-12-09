@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Ejecutar pruebas
-        run: npm run build
+        run: npm run dev
 
       - name: Analizar código con ESLint
         run: npx eslint . --ext .js,.ts
