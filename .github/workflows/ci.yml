@@ -22,11 +22,11 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar ESLint
-        run: npx eslint . --ext .js,.ts
-
       - name: Ejecutar pruebas (1 prueba local y 1 prueba del servidor)
         run: npx jest
 
-      - name: Ejecutar pruebas (solo arranca para verificar que no crashea)
+      - name: Ejecutar smoke test (solo arranca para verificar que no crashea)
         run: npm start & sleep 5 && kill $!
+
+      - name: Ejecutar ESLint
+        run: npx eslint . --ext .js,.ts
