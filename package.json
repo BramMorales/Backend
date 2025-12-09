@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "lint": "eslint"
+    "lint": "eslint . --ext .js,.ts",
+    "test": "echo \"No hay pruebas aún\" && exit 0"
   },
   "author": "",
   "license": "ISC",
