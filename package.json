@@ -4,7 +4,9 @@
   "description": "backend examen",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint"
   },
   "author": "",
   "license": "ISC",
@@ -18,9 +20,14 @@
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.2",
-    "nodemon": "^3.1.10",
     "path": "^0.12.7",
     "pg": "^8.16.3",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.11"
   }
 }
