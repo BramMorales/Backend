@@ -1,0 +1,36 @@
+# Dependencias
+node_modules/
+
+# Entorno
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Archivos temporales
+.tmp/
+temp/
+*.tmp
+
+# Subidas o archivos que no deben ir al repo
+uploads/
+storage/
+coverage/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Build / transpilers
+dist/
+build/
+.cache/
