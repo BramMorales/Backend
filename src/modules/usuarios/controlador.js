@@ -1,9 +1,4 @@
-const config = require('../../config');
-const XLSX = require("xlsx");
-const fs = require("fs");
-const jwt = require('../../auth');
 const auth = require('../auth');
-const path = require("path");
 
 
 module.exports = function (dbInyectada) {

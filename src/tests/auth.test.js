@@ -1,10 +1,9 @@
 const request = require("supertest");
 const bcrypt = require("bcryptjs");
-const app = require("../app"); // tu archivo principal express
+const app = require("../app"); 
 const db = require("../db/postgres");
 const authController = require("../modules/auth/controlador")();
 
-// Mock DB
 jest.mock("../db/postgres", () => ({
   runQuery: jest.fn()
 }));

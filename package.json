@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "lint": "eslint . --ext .js,.ts"
+    "lint": "eslint . --ext .js,.ts",
+    "prepare": "husky install",
+    "test": "npx jest"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +31,9 @@
     "@eslint/js": "^9.39.1",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
-    "nodemon": "^3.1.11"
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.11",
+    "sonar-scanner": "^3.1.0",
+    "sonarqube-scanner": "^4.3.2"
   }
 }

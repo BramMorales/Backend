@@ -9,8 +9,6 @@ module.exports = function (dbInyectada) {
   }
 
   async function importarCalificacionesC(req, id, rol) {
-    const [materia] = await db.runQuery(`SELECT idmateria_profesormateria FROM profesormateria WHERE idprofesor_profesormateria = $1`,[id])
-
     return new Promise((resolve, reject) => {
       try {
         if (!req.file) {

@@ -4,7 +4,6 @@ const respuesta = require('../../red/respuestas');
 const controlador = require('./index');
 const multer = require("multer");
 const jwtMiddleware = require('../../middleware/jwtMiddleware');
-const upload = multer({ dest: "uploads/" });
 
 router.post('/registrar', agregar);
 router.put('/modificar/:id_usuarioexamen', modificar);
@@ -17,7 +16,6 @@ async function modificar(req, res) {
     const { id_usuarioexamen } = req.params;
     const data = req.body;
 
-    const result = await controlador.modificar(id_usuarioexamen, data);
 
     const mensaje = "Item actualizado con éxito";
     respuesta.success(req, res, { mensaje, id: id_usuarioexamen }, 200);
@@ -27,7 +25,7 @@ async function modificar(req, res) {
 }
 
 
-async function agregar(req, res, next) {
+async function agregar(req, res) {
   try {
     const result = await controlador.agregar(req, res, req.body);
     const mensaje = "Item guardado con éxito";
