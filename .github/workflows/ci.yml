@@ -26,4 +26,4 @@ jobs:
         run: npm start & sleep 5 && kill $!
 
       - name: Ejecutar ESLint
-        run: npm run lint
+        run: npx eslint . --ext .js,.ts
