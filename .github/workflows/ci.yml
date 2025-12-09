@@ -22,8 +22,8 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar pruebas
-        run: npm run start
+      - name: Ejecutar pruebas (solo arranca para verificar que no crashea)
+        run: npm start & sleep 5 && kill $!
 
-      - name: Analizar código con ESLint
-        run: npx eslint . --ext .js,.ts
+      - name: Ejecutar ESLint
+        run: npm run lint
